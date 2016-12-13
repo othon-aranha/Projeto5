@@ -34,16 +34,16 @@ var ProfessorComponent = (function () {
             return;
         }
         this.professorService.salvarProfessor(professor)
-            .subscribe(function (escola) { return _this.popularLista(escola); }, function (error) { return _this.errorMessage = error; });
+            .subscribe(function (professor) { return _this.popularLista(professor); }, function (error) { return _this.errorMessage = error; });
     };
-    ProfessorComponent.prototype.popularLista = function (escola) {
-        this.professores.push(escola);
+    ProfessorComponent.prototype.popularLista = function (professor) {
+        this.professores.push(professor);
         this.professorObject = new professor_1.Professor();
     };
-    ProfessorComponent.prototype.editarProfessor = function (escola, persistir) {
+    ProfessorComponent.prototype.editarProfessor = function (professor, persistir) {
         if (persistir === void 0) { persistir = false; }
         this.edit = true;
-        this.professorObject = escola;
+        this.professorObject = professor;
         if (persistir) {
             this.professorObject = new professor_1.Professor();
             this.edit = false;

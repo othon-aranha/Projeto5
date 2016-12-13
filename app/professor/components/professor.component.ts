@@ -39,19 +39,19 @@ export class ProfessorComponent implements OnInit {
         if (!professor.nome) { return; }
         this.professorService.salvarProfessor(professor)
             .subscribe(
-            escola => this.popularLista(escola),
+            professor => this.popularLista(professor),
             error => this.errorMessage = <any>error
             );
     }
 
-    popularLista(escola: Professor) {
-        this.professores.push(escola);
+    popularLista(professor: Professor) {
+        this.professores.push(professor);
         this.professorObject = new Professor();
     }
 
-    editarProfessor(escola, persistir = false): void {
+    editarProfessor(professor, persistir = false): void {
         this.edit = true;
-        this.professorObject = escola;
+        this.professorObject = professor;
         if (persistir) {
             this.professorObject = new Professor();
             this.edit = false;

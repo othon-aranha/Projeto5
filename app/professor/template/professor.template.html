@@ -59,25 +59,25 @@
     </tr>
     <tr *ngFor="let professor of professores; let i = index">
         <td>
-            {{escola._id}}
+            {{professor._id}}
         </td>
         <td>
-            {{escola.nome}}
+            {{professor.nome}}
         </td>
         <td>
-            {{escola.idade}}
+            {{professor.idade}}
         </td>        
         <td>
-            {{escola.turma}}
+            {{professor.turma}}
         </td>                
         <td>
-            {{escola.turno}}
+            {{professor.turno}}
         </td>                        
         <td>
-            {{escola.matricula}}
+            {{professor.matricula}}
         </td>                                
         <td>
-            {{escola.materia}}
+            {{professor.materia}}
         </td>                                        
         <td>
             <button class="btn btn-primary" (click)=editarProfessor(professor)>Editar</button>

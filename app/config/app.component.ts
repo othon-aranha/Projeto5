@@ -4,7 +4,8 @@ import './component/rxjs-operators';
 @Component({
     selector:'projeto5',
     template:`
-        <usuario-component></usuario-component>
+        <escola-component></escola-component>,
+        <professor-component></professor-component>
     `
 })
 

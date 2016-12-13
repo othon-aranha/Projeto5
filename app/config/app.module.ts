@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { EscolaComponent } from '../usuario/components/escola.component';
-import { EscolaService } from '../usuario/service/escola.service';
+import { EscolaComponent } from '../escola/components/escola.component';
+import { EscolaService } from '../escola/service/escola.service';
+import { ProfessorComponent } from '../professor/components/professor.component';
+import { ProfessorService } from '../professor/service/professor.service';
 
 //adicione essa linha
 import { HttpModule }    from '@angular/http';
@@ -17,10 +19,12 @@ import { HttpModule }    from '@angular/http';
     ],
     declarations: [
         AppComponent,
-        EscolaComponent
+        EscolaComponent,
+        ProfessorComponent
     ],
     providers:[
-        EscolaService
+        EscolaService,
+        ProfessorService
 
     ],
     bootstrap: [AppComponent]

@@ -8,36 +8,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var escola_component_1 = require('../usuario/components/escola.component');
-var escola_service_1 = require('../usuario/service/escola.service');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var app_component_1 = require("./app.component");
+var escola_component_1 = require("../escola/components/escola.component");
+var escola_service_1 = require("../escola/service/escola.service");
+var professor_component_1 = require("../professor/components/professor.component");
+var professor_service_1 = require("../professor/service/professor.service");
 //adicione essa linha
-var http_1 = require('@angular/http');
+var http_1 = require("@angular/http");
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                http_1.HttpModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                escola_component_1.EscolaComponent
-            ],
-            providers: [
-                escola_service_1.EscolaService
-            ],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            http_1.HttpModule
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            escola_component_1.EscolaComponent,
+            professor_component_1.ProfessorComponent
+        ],
+        providers: [
+            escola_service_1.EscolaService,
+            professor_service_1.ProfessorService
+        ],
+        bootstrap: [app_component_1.AppComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

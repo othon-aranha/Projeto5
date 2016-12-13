@@ -1,0 +1,89 @@
+<h2>Exemplo de Professores consumindo rest</h2>
+<div class="form-group col-md-2">
+    <label>Id</label>
+    <input class="form-control" [(ngModel)]="professorObject._id"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Nome</label>
+    <input class="form-control" [(ngModel)]="professorObject.nome"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Idade</label>
+    <input class="form-control" [(ngModel)]="professorObject.idade"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Turma</label>
+    <input class="form-control" [(ngModel)]="professorObject.turma"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Turno</label>
+    <input class="form-control" [(ngModel)]="professorObject.turno"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Matricula</label>
+    <input class="form-control" [(ngModel)]="professorObject.matricula"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Matéria</label>
+    <input class="form-control" [(ngModel)]="professorObject.materia"   />
+</div>
+<div *ngIf="!edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="salvarProfessor(professorObject)">Salvar</button>
+</div>
+<div *ngIf="edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="editarProfessor(professorObject, true)">Editar</button>
+</div>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Idade
+        </th>    
+        <th>
+            Turma
+        </th>   
+        <th>
+            Turno
+        </th>           
+        <th>
+            Matricula
+        </th>            
+        <th>
+            Materia
+        </th>                    
+    </tr>
+    <tr *ngFor="let professor of professores; let i = index">
+        <td>
+            {{escola._id}}
+        </td>
+        <td>
+            {{escola.nome}}
+        </td>
+        <td>
+            {{escola.idade}}
+        </td>        
+        <td>
+            {{escola.turma}}
+        </td>                
+        <td>
+            {{escola.turno}}
+        </td>                        
+        <td>
+            {{escola.matricula}}
+        </td>                                
+        <td>
+            {{escola.materia}}
+        </td>                                        
+        <td>
+            <button class="btn btn-primary" (click)=editarProfessor(professor)>Editar</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deletarProfessor(professor._id, i)">Deletar</button>
+        </td>
+    </tr>
+</table>

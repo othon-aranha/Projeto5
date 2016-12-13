@@ -1,0 +1,93 @@
+<h2>Exemplo de Transportes consumindo rest</h2>
+<div class="form-group col-md-2">
+    <label>Id</label>
+    <input class="form-control" [(ngModel)]="transporteObject._id"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Nome</label>
+    <input class="form-control" [(ngModel)]="transporteObject.nome"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Razão Social</label>
+    <input class="form-control" [(ngModel)]="transporteObject.razao_social"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Condutor</label>
+    <input class="form-control" [(ngModel)]="transporteObject.condutor"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Idade Condutor</label>
+    <input class="form-control" [(ngModel)]="transporteObject.idade_condutor"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Horários</label>
+    <input class="form-control" [(ngModel)]="transporteObject.horarios"   />
+</div>
+<div class="form-group col-md-2">
+    <label>Turnos</label>
+    <input class="form-control" [(ngModel)]="transporteObject.turnos"   />
+</div>
+<div *ngIf="!edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="salvarTransporte(transporteObject)">Salvar</button>
+</div>
+<div *ngIf="edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="editarTransporte(transporteObject, true)">Editar</button>
+</div>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Razão Social
+        </th>    
+        <th>
+            Condutor
+        </th>   
+        <th>
+            Idade
+        </th>           
+        <th>
+            Horários
+        </th>            
+        <th>
+            Turnos
+        </th>                    
+        <th>            
+        </th>                            
+        <th>            
+        </th>                                    
+    </tr>
+    <tr *ngFor="let transporte of transportes; let i = index">
+        <td>
+            {{transporte._id}}
+        </td>
+        <td>
+            {{transporte.nome}}
+        </td>
+        <td>
+            {{transporte.razao_social}}
+        </td>        
+        <td>
+            {{transporte.condutor}}
+        </td>                
+        <td>
+            {{transporte.idade_condutor}}
+        </td>                        
+        <td>
+            {{transporte.horarios}}
+        </td>                                
+        <td>
+            {{transporte.turnos}}
+        </td>                                        
+        <td>
+            <button class="btn btn-primary" (click)=editarTransporte(transporte)>Editar</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deletarTransporte(transporte._id, i)">Deletar</button>
+        </td>
+    </tr>
+</table>

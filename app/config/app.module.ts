@@ -7,6 +7,8 @@ import { EscolaComponent } from '../escola/components/escola.component';
 import { EscolaService } from '../escola/service/escola.service';
 import { ProfessorComponent } from '../professor/components/professor.component';
 import { ProfessorService } from '../professor/service/professor.service';
+import { TransporteComponent } from '../transporte/components/transporte.component';
+import { TransporteService } from '../transporte/service/transporte.service';
 
 //adicione essa linha
 import { HttpModule }    from '@angular/http';
@@ -20,7 +22,8 @@ import { HttpModule }    from '@angular/http';
     declarations: [
         AppComponent,
         EscolaComponent,
-        ProfessorComponent
+        ProfessorComponent,
+        TransporteComponent
     ],
     providers:[
         EscolaService,

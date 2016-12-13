@@ -3,7 +3,7 @@ import './component/rxjs-operators';
 
 @Component({
     selector:'projeto5',
-    template:`        
+    template:`                
         <professor-component></professor-component>
     `
 })

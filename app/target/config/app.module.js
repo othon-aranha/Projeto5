@@ -16,6 +16,7 @@ var escola_component_1 = require("../escola/components/escola.component");
 var escola_service_1 = require("../escola/service/escola.service");
 var professor_component_1 = require("../professor/components/professor.component");
 var professor_service_1 = require("../professor/service/professor.service");
+var transporte_component_1 = require("../transporte/components/transporte.component");
 //adicione essa linha
 var http_1 = require("@angular/http");
 var AppModule = (function () {
@@ -33,7 +34,8 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             escola_component_1.EscolaComponent,
-            professor_component_1.ProfessorComponent
+            professor_component_1.ProfessorComponent,
+            transporte_component_1.TransporteComponent
         ],
         providers: [
             escola_service_1.EscolaService,

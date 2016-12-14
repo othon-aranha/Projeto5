@@ -18,7 +18,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'projeto5',
-        template: "                \n        <professor-component></professor-component>\n    "
+        template: "                \n        <usuario-component></usuario-component>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

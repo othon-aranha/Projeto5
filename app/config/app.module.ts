@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { UsuarioComponent } from '../usuario/components/usuario.component';
+import { UsuarioService } from '../usuario/service/usuario.service';
 import { EscolaComponent } from '../escola/components/escola.component';
 import { EscolaService } from '../escola/service/escola.service';
 import { ProfessorComponent } from '../professor/components/professor.component';
@@ -21,6 +23,7 @@ import { HttpModule }    from '@angular/http';
     ],
     declarations: [
         AppComponent,
+        UsuarioComponent,
         EscolaComponent,
         ProfessorComponent,
         TransporteComponent

@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
+var usuario_component_1 = require("../usuario/components/usuario.component");
 var escola_component_1 = require("../escola/components/escola.component");
 var escola_service_1 = require("../escola/service/escola.service");
 var professor_component_1 = require("../professor/components/professor.component");
@@ -33,6 +34,7 @@ AppModule = __decorate([
         ],
         declarations: [
             app_component_1.AppComponent,
+            usuario_component_1.UsuarioComponent,
             escola_component_1.EscolaComponent,
             professor_component_1.ProfessorComponent,
             transporte_component_1.TransporteComponent
